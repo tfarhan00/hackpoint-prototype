@@ -12,9 +12,9 @@ export default function EndSection() {
  
     <section className='w-[100%] h-auto py-8 relative flex flex-col items-center text-center justify-center'>
           
-    <div className='grid grid-cols-2 lg:grid-cols-3 w-[90%] gap-[0.15rem] p-[0.15rem] bg-[#1a1a1a] mt-4 rounded-md'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] gap-[0.15rem] p-[0.15rem] bg-[#1a1a1a] mt-4 rounded-md'>
       
-        <motion.div className='bg-white relative rounded-xl h-[28rem] overflow-hidden w-full col-span-3 flex justify-between items-center p-8'>
+        <motion.div className='bg-white relative rounded-xl h-[28rem] overflow-hidden w-full col-span-3 flex flex-col md:flex-row justify-between items-center p-8'>
             <div className='flex flex-col text-start items-start text-7xl font-[500] p-8'>
               <motion.h1>Hackpoint.</motion.h1>
               <motion.h1>For.</motion.h1>
