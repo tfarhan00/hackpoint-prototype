@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.glass {
+    background: rgba( 74, 68, 68, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 25, 25, 25, 0.27 );
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.glass-white {
+    background: rgba( 245, 245, 245, 0.20 );
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 20px );
+}
+
+.title {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid rgb(199, 193, 193); 
+    line-height: 0.1em;
+    margin: 15px 0 20px;
+}
+
+.title-line {
+    background:#fff; 
+    padding:0 10px;
+}
+
+.myCursor {
+    z-index: 1;
+    position: fixed;
+    background: rgba( 74, 68, 68, 0.25 );
+    backdrop-filter: blur( 5px );
+    border-radius: 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.stickTop {
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.transition-img-contain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transition-img {
+    width: 800px;
+    display: flex;
+}
+
+.final {
+    display: block;
+    top: -128px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.final-img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.animate {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(calc(-25%), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: running;
+}
+  
+.circle-text {
+  animation: rotateText 10s linear infinite;
+}
+.circle-scale {
+  animation: rotateScale 40s linear infinite;
+}
+
+.blacked {
+    filter: brightness(0);
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateScale {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.text-scroll > p {
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 50%,
+    rgb(40, 40, 40) 50%
+    );
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.company {
+  position: relative;
+  min-height: 12rem;
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.inside-company {
+  width: 100%;
+}
+
+.title-company {
+  width: 70%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contain-company {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.scroller-company {
+  position: relative;
+  width: calc(250px * 10);
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  animation: scroll 30s linear infinite;
+}
+
+.logo-company {
+  margin: 0 4rem;
+  flex-shrink: 0;
+  width: 14rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img-company {
+  filter: brightness(0);
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+100% { transform: translateX(calc(-250px * 5))}
+}
