@@ -16,25 +16,12 @@ import Stats from "./routes/Stats"
 
 function App() {
 
-  const ProtectedPage = ({children}) => {
-    if (localStorage.getItem("username") == null) {
-      return <Navigate to='/login' />
-    }
-    else {
-      return children
-    }
-  }
-
   return (
     <BrowserRouter>
       <Layout>
         <Navbar />
           <Routes>
-            <Route path="/" element={
-              <ProtectedPage>
-                <Home />
-              </ProtectedPage>
-            }/>
+            <Route path="/" element={<Home />}/>
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/courses" element={<Courses />} />
