@@ -1,6 +1,6 @@
 # 👨‍💻 Hackpoint
 
-### A developer platform for the enthusiast 
+### A developer platform for the enthusiast - Mockup Project
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a79dd0aa-b5ab-45a8-89ba-79435bbf9b6b/deploy-status)](https://app.netlify.com/sites/hackpoint/deploys)
 ### Tech Stack
 ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)
